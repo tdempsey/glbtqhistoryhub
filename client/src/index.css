@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 290 40% 87%; /* #ddc3e2 */
+  --foreground: 0 0% 0%; /* #000000 */
+  --muted: 290 30% 92%;
+  --muted-foreground: 290 20% 20%;
+  --popover: 290 40% 87%;
+  --popover-foreground: 0 0% 0%;
+  --card: 290 40% 87%;
+  --card-foreground: 0 0% 0%;
+  --border: 290 30% 75%;
+  --input: 290 30% 75%;
+  --primary: 290 50% 70%; /* #c8a8d0 */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 290 30% 80%;
+  --secondary-foreground: 290 20% 10%;
+  --accent: 290 40% 75%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 290 50% 70%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 290 50% 15%;
+  --foreground: 0 0% 98%;
+  --muted: 290 30% 20%;
+  --muted-foreground: 290 20% 60%;
+  --popover: 290 50% 15%;
+  --popover-foreground: 0 0% 98%;
+  --card: 290 50% 15%;
+  --card-foreground: 0 0% 98%;
+  --border: 290 30% 25%;
+  --input: 290 30% 25%;
+  --primary: 290 50% 70%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 290 30% 25%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 290 30% 25%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 290 50% 70%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom styles for lavender theme */
+.lavender-bg {
+  background-color: #ddc3e2;
+}
+
+.lavender-text {
+  color: #ddc3e2;
+}
+
+.purple-accent {
+  color: #9b59b6;
+}
+
+.purple-dark {
+  color: #8e44ad;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus-outline:focus {
+  outline: 2px solid #9b59b6;
+  outline-offset: 2px;
+}

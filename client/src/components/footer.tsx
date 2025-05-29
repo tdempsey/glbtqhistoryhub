@@ -1,0 +1,148 @@
+import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
+import { SiBluesky } from "react-icons/si";
+import hpLogo from "@assets/hplogo.png";
+
+export default function Footer() {
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <footer className="bg-white/10 backdrop-blur-sm py-12 px-4 sm:px-6 lg:px-8 mt-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <img 
+              src={hpLogo} 
+              alt="Georgia LGBTQ History Project Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <h3 className="text-2xl font-bold text-black">Georgia LGBTQ History Project</h3>
+          </div>
+          <p className="text-black">Preserving Georgia's LGBTQ History</p>
+        </div>
+        
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h4 className="font-semibold mb-4 text-black">Navigation</h4>
+            <ul className="space-y-2 text-black">
+              <li>
+                <button
+                  onClick={() => scrollToSection("#home")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#events")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Events
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#resources")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Resources
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#contact")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4 text-black">Resources</h4>
+            <ul className="space-y-2 text-black">
+              <li><a href="#" className="hover:text-purple-600 transition-colors duration-200">Historical Timeline</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors duration-200">Document Archive</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors duration-200">Educational Materials</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors duration-200">Research Guidelines</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4 text-black">Get Involved</h4>
+            <ul className="space-y-2 text-black">
+              <li>
+                <button
+                  onClick={() => scrollToSection("#donate")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Donate
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#contact")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Volunteer
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#contact")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Share Your Story
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#events")}
+                  className="hover:text-purple-600 transition-colors duration-200 text-left"
+                >
+                  Attend Events
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4 text-black">Connect</h4>
+            <div className="flex space-x-4 mb-4">
+              <a href="#" className="text-black hover:text-purple-600 transition-colors duration-200">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-black hover:text-purple-600 transition-colors duration-200">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-black hover:text-purple-600 transition-colors duration-200">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-black hover:text-purple-600 transition-colors duration-200">
+                <SiBluesky className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-black hover:text-purple-600 transition-colors duration-200">
+                <Mail className="h-6 w-6" />
+              </a>
+            </div>
+            <p className="text-black text-sm">info@galgbtqhistory.org</p>
+          </div>
+        </div>
+        
+        <div className="border-t border-white/20 pt-8 text-center">
+          <p className="text-black text-sm">
+            © 2024 Georgia LGBTQ History Project. All rights reserved. | 
+            <a href="#" className="hover:text-purple-600 transition-colors duration-200 ml-1">Privacy Policy</a> | 
+            <a href="#" className="hover:text-purple-600 transition-colors duration-200 ml-1">Terms of Use</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
