@@ -127,11 +127,11 @@ export default function Footer() {
               <a href="https://bsky.app/profile/galgbtqhistory.bsky.social" className="text-black hover:text-purple-600 transition-colors duration-200">
                 <SiBluesky className="h-6 w-6" />
               </a>
-              <a href="mailto:galgbtqhistoryproject@gmail.org" className="text-black hover:text-purple-600 transition-colors duration-200">
+              <a href="mailto:galgbtqhistoryproject.org" className="text-black hover:text-purple-600 transition-colors duration-200">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
-            <p className="text-black text-sm">info@galgbtqhistoryproject.org</p>
+            <p className="text-black text-sm">info@galgbtqhistory.org</p>
           </div>
         </div>
         
